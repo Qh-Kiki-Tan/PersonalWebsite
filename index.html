@@ -95,11 +95,20 @@ nav ul li a {
             cursor: pointer;
             margin-top: 1rem; /* Add spacing above the button */
         }
-        section {
-            padding: 2rem;
-            margin: 0;
-            background: white;
-        }
+       section {
+        padding: 2rem;
+        margin: 0;
+        background: white;
+        display: flex; /* Using flexbox */
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+        text-align: center; /* Center text */
+    }
+
+#projects ul {
+    padding: 0; /* Remove padding from the list for better alignment */
+    list-style: none; /* Remove default list styles */
+}
 
         #projects {
             background: #f8ecf0;
@@ -117,8 +126,9 @@ nav ul li a {
        
         /* Update project links color */
         #projects a {
-            color: #d17b95;
-            text-decoration: none;
+          color: #d17b95; /* Update color */
+          text-decoration: none; /* No underline by default */
+          font-weight: bold; /* Make links bold */
         }
 
         #projects a:hover {
@@ -157,11 +167,11 @@ nav ul li a {
     <h2>About Me</h2>
     <p>I'm Kiki Tan, a highly creative and technically skilled individual pursuing a <strong>Global Business and Digital Arts degree at the University of Waterloo</strong>. My experience spans <strong>game design, UX/UI, and visual arts</strong>, demonstrated through personal projects including magazine design, prototyping, and branding using tools like <strong>Adobe Creative Suite, Figma, and HTML</strong>.</p>
     <p>I've interned at Lilith Games and BorgWarner, gaining experience in game mechanics analysis and AR technology. I'm proficient in multiple programming languages and passionate about leveraging technology for innovative solutions.</p>
-     <div class="button-container">
-    <button onclick="window.location.href='your-more-projects-url.html'" style="margin-top: 1rem; background-color: #d17b95; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">View More</button>
-  </div>
+    <div class="button-container">
+        <button onclick="window.location.href='your-more-projects-url.html'" style="margin-top: 1rem; background-color: #d17b95; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">View More</button>
+    </div>
 </section>
-  
+
 <section id="projects">
     <h2>Projects</h2>
     <ul>
@@ -170,24 +180,26 @@ nav ul li a {
         <li><a href="https://online.flippingbook.com/view/838141706/">Flipbook</a> - Created with the Adobe suite.</li>
     </ul>
     <div class="button-container">
-    <button onclick="window.location.href='your-more-projects-url.html'" style="margin-top: 1rem; background-color: #d17b95; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">View More</button>
-  </div>
+        <button onclick="window.location.href='your-more-projects-url.html'" style="margin-top: 1rem; background-color: #d17b95; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">View More</button>
+    </div>
 </section>
 
 <section id="contact">
     <h2>Contact Me</h2>
-    <li>
-      <strong>Phone Number: </strong>778-706-5583
-    </li>
-     <li>
-      <strong>Email: </strong>qhtan@uwaterloo.ca
-    </li>
-    <li>
-      <strong>Residence: </strong>Canada
-    </li> 
+    <ul style="padding: 0; list-style: none;"> <!-- Added styling here -->
+        <li>
+            <strong>Phone Number: </strong>778-706-5583
+        </li>
+        <li>
+            <strong>Email: </strong>qhtan@uwaterloo.ca
+        </li>
+        <li>
+            <strong>Residence: </strong>Canada
+        </li>
+    </ul>
     <div class="button-container">
-    <button onclick="window.location.href='your-more-projects-url.html'" style="margin-top: 1rem; background-color: #d17b95; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">View More</button>
-  </div>
+        <button onclick="window.location.href='your-more-projects-url.html'" style="margin-top: 1rem; background-color: #d17b95; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">View More</button>
+    </div>
 </section>
 
 <footer>
