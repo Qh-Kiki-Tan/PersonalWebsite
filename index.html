@@ -76,11 +76,12 @@
         }
 
         .hero img {
-            width: 100%;
-            height: auto;
-            max-width: 40%;
+            width: auto;
+            height: 100%;
+            max-width: 40%; /* Optional maximum width */
             border-radius: 10%;
             object-fit: cover;
+            flex-shrink: 0; 
         }
 
         button {
@@ -96,7 +97,6 @@
         button:hover {
             background-color: #7d6e91; 
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            text-align: center;
         }
 
         section {
@@ -104,7 +104,7 @@
             background: white;
         }
 
-        #about p {
+        #about {
             line-height: 1.6;
             text-align: center;
         }
@@ -144,10 +144,7 @@
         strong {
             color: #d17b95;
         }
-       .button-container {
-            text-align: center; /* Center button container */
-            margin-top: 1rem;  /* Add spacing above the button */
-        }
+
     </style>
 </head>
 <body>
