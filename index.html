@@ -42,72 +42,83 @@ nav ul li {
 
 nav ul li a {
     color: #d17b95;
-    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, text-decoration 0.3s;
+}
+
+nav ul li a:hover {
+    color: #7d6e91;
 }
         .hero {
-            display: flex;
-            align-items: stretch;
-            justify-content: space-between;
-            padding: 0;
-            background: linear-gradient(to right, #2d2f42, #d689a0);
-            height: 70vh;
-            box-sizing: border-box;
-            text-align: left;
-            color: white;
-        }
+          display: flex; /* Use flexbox to arrange children */
+          align-items: flex-start; /* Align items to the top */
+          padding: 0;
+          background: linear-gradient(to right, #2d2f42, #d689a0);
+          height: 70vh; /* Maintain section height */
+          box-sizing: border-box;
+          color: white;
+      }
 
-        .hero-text {
-            max-width: 50%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 1rem;
-        }
+.hero-text {
+    max-width: 50%; /* Limit width of text */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: flex-start; /* Align text to the top */
+    padding: 1rem;
+}
 
-        .hero-text h1 {
-            font-size: 2rem;
-            margin: 0 0 0.5rem;
-        }
+.hero-text h1 {
+    font-size: 2rem;
+    margin: 0 0 0.5rem; /* Space below heading */
+}
 
-        .hero-text p {
-            font-size: 1.1rem;
-        }
+.hero-text p {
+    font-size: 1.1rem;
+}
 
-        .hero img {
-            height: 100%;
-            width: auto;
-            border-radius: 10%;
-            object-fit: cover;
-        }
+.hero img {
+    height: auto; /* Maintain aspect ratio */
+    width: 40%; /* Adjust width as needed */
+    max-width: 400px; /* Set maximum width */
+    border-radius: 10%; /* Maintain border roundness */
+    object-fit: cover; /* Maintain proper aspect ratio */
+    float: right; /* Float image to the right */
+    margin-left: 20px; /* Optional: add margin for spacing */
+}
         .button-container {
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-top: 1rem; /* Optional: add spacing above the container */
+            margin-top: 1rem; 
         }
 
-        .more-projects-button {
-            background-color: #d17b95;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 1rem; /* Add spacing above the button */
-        }
+      button {
+        background-color: #d17b95; 
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s, box-shadow 0.3s; 
+      }
+
+      button:hover {
+          background-color: #7d6e91;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      }
        section {
         padding: 2rem;
         margin: 0;
         background: white;
-        display: flex; /* Using flexbox */
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center items horizontally */
-        text-align: center; /* Center text */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
 #projects ul {
-    padding: 0; /* Remove padding from the list for better alignment */
-    list-style: none; /* Remove default list styles */
+    padding: 0;
+    list-style: none;
 }
 
         #projects {
@@ -119,20 +130,21 @@ nav ul li a {
             line-height: 1.6;
         }
 
-        /* Change strong color */
         strong {
             color: #d17b95;
         }
        
-        /* Update project links color */
         #projects a {
-          color: #d17b95; /* Update color */
-          text-decoration: none; /* No underline by default */
-          font-weight: bold; /* Make links bold */
+          color: #d17b95;
+          font-weight: bold;
         }
 
         #projects a:hover {
-            text-decoration: underline; /* Underline on hover */
+            color: #7d6e91;
+        }
+
+      #contact {
+            line-height: 1.6;
         }
 
         footer {
@@ -163,12 +175,13 @@ nav ul li a {
     </div>
     <img src="Shadow.png" alt="Kiki Tan">
 </section>
+  
 <section id="about">
     <h2>About Me</h2>
     <p>I'm Kiki Tan, a highly creative and technically skilled individual pursuing a <strong>Global Business and Digital Arts degree at the University of Waterloo</strong>. My experience spans <strong>game design, UX/UI, and visual arts</strong>, demonstrated through personal projects including magazine design, prototyping, and branding using tools like <strong>Adobe Creative Suite, Figma, and HTML</strong>.</p>
     <p>I've interned at Lilith Games and BorgWarner, gaining experience in game mechanics analysis and AR technology. I'm proficient in multiple programming languages and passionate about leveraging technology for innovative solutions.</p>
     <div class="button-container">
-        <button onclick="window.location.href='your-more-projects-url.html'" style="margin-top: 1rem; background-color: #d17b95; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">View More</button>
+        <button onclick="window.location.href='your-more-projects-url.html'">View More</button>
     </div>
 </section>
 
@@ -180,13 +193,13 @@ nav ul li a {
         <li><a href="https://online.flippingbook.com/view/838141706/">Flipbook</a> - Created with the Adobe suite.</li>
     </ul>
     <div class="button-container">
-        <button onclick="window.location.href='your-more-projects-url.html'" style="margin-top: 1rem; background-color: #d17b95; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">View More</button>
+        <button onclick="window.location.href='your-more-projects-url.html'">View More</button>
     </div>
 </section>
 
 <section id="contact">
     <h2>Contact Me</h2>
-    <ul style="padding: 0; list-style: none;"> <!-- Added styling here -->
+    <ul style="padding: 0; list-style: none;">
         <li>
             <strong>Phone Number: </strong>778-706-5583
         </li>
@@ -197,11 +210,9 @@ nav ul li a {
             <strong>Residence: </strong>Canada
         </li>
     </ul>
-    <div class="button-container">
-        <button onclick="window.location.href='your-more-projects-url.html'" style="margin-top: 1rem; background-color: #d17b95; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">View More</button>
-    </div>
+    <button onclick="window.location.href='your-more-projects-url.html'">View More</button>
 </section>
-
+  
 <footer>
     <p>&copy; 2024 Kiki Tan. All rights reserved.</p>
     
